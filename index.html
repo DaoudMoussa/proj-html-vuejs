@@ -13,15 +13,108 @@
     </head>
     <body>
         <div id="root">
+            <header>
+                <div class="top-header">
+                    <div class="logo-box">
+                        <img class="logo" src="assets/dark-pet-logo.png" alt="logo pet supplies">
+                    </div>
 
-            <div class="white-section">
-                <h3>titolo sezione</h3>
-                <p>paragrafo sezione</p>
-                <a href="" class="btn btn-primary" role="button">Cliccami</a>
-                <a href="" class="btn btn-secondary" role="button">Cliccami</a>
+                    <div class="search-box">
+                        <i class="fas fa-search"></i>
+                        <input type="text" name="" value="" placeholder="Search...">
+                    </div>
 
-            </div>
+                    <div class="calling">
+                        <strong>Questions?</strong>
+                        Call us : 1.800.123.4567
+                    </div>
 
+                    <div class="icon-container">
+                        <i class="fas fa-shopping-bag"></i>
+                        <i class="far fa-user"></i>
+                    </div>
+                </div>
+
+                <nav class="bottom-header">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <ul>
+                                    <li v-for="(voice, index) in navVoices"
+                                        :class="getNavVoiceClasses(index)">
+                                        <a href="#">{{ voice.name }}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+
+            <main>
+                <section id="jumbo">
+                    <div class="top-bar mosaic-bg">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-4">
+                                    <div class="text-box">
+                                        <i class="far fa-map"></i>
+                                        <p>
+                                            <strong>International</strong>
+                                            Shipping Services
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="text-box">
+                                        <i class="far fa-clock"></i>
+                                        <p>
+                                            See our
+                                            <strong>store hours</strong>
+                                            and services
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="col-4">
+                                    <div class="text-box">
+                                        <i class="fas fa-check"></i>
+                                        <p>
+                                            We price match to give you the
+                                            <strong>best deals</strong>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="jumbo-section">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-6">
+                                    <small>find the best animal supplies</small>
+                                    <h4>We know animals are a part of your family, let us helptake care of them.</h4>
+                                    <a href="#" class="btn btn-primary">Learn more about us</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="discount-section mosaic-bg" v-if="hasDiscount">
+                        <div class="container">
+                            <div class="row justify-content-center">
+                                <div class="col-12">
+                                    <div class="content-box">
+                                        <img src="assets\food-transparent-5.png" alt="cibo per cani">
+                                        <p>Get $25 OFF your first purchase of our homemade pet food!</p>
+                                        <a href="#">visit the shop</a>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
         </div>
 
 
