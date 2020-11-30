@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto condesed", sans-serif;
+}
+
+.mosaic-bg {
+    background-color: #1e3020;
+    /* background-image:  immagine non presente nella cartella */
+    color: white;
+    position: relative;
+    background-image: url("assets/avatar-3.jpg");
+    padding: 100px 0;
+}
+
+.mosaic-bg.overlay > * {
+    position: relative;
+    z-index: 2;
+}
+
+.mosaic-bg.overlay::before {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, #2a382a 60%, rgba(0,0,0,0) 80%);
+}
+
+.white-section {
+    padding: 100px 0;
+    background-color: white;
+    color: #2a382a;
+}
+
+.btn {
+    border-radius: 20px;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+.btn.btn-secondary {
+    color: #fff;
+    background-color: #59b742;
+    border-color: #59b742;
+}
+
+.btn.btn-secondary:hover {
+    background-color: #2a382a;
+    border-color: #2a382a;
+}
+
+.btn.btn-primary {
+    color: black;
+    background-color: white;
+    border-color: white;
+}
+
+.btn.btn-primary:hover {
+    color: white;
+    background-color: #59b742;
+    border-color: #59b742;
+}
