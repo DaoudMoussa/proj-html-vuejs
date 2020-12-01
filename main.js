@@ -35,6 +35,7 @@ const app = new Vue({
         ],
         activeNavVoice: 0,
         hasDiscount: true,
+        // Dovrebbe essere un dato preso da un database con tutti i prodotti dell'e-commerce
         products: [
             {
                 product: 'colored pet bed',

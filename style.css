@@ -36,6 +36,7 @@
 
 h1, h2, h3, h4, h5, h6 {
     font-family: times;
+    font-weight: 600;
 }
 
 .btn {
@@ -81,6 +82,7 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: column;
     align-items: center;
     margin-right: 5px;
+    width: calc(25% - 15px / 4);
     cursor: pointer;
 }
 
@@ -89,7 +91,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .list-container .product img {
-    width: 300px;
+    width: 100%;
     margin-bottom: 15px;
 }
 
@@ -295,4 +297,8 @@ h1, h2, h3, h4, h5, h6 {
 
 #jumbo .discount-section a:hover {
     color: white;
+}
+
+#e-commerce h2 {
+    font-size: 2.5rem;
 }
