@@ -39,6 +39,11 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 600;
 }
 
+input:focus,
+input:active {
+    outline: none;
+}
+
 .btn {
     font-size: 14px;
     padding: 10px 25px;
@@ -434,4 +439,26 @@ h1, h2, h3, h4, h5, h6 {
 
 .testimonial-card .name {
     opacity: 0.7;
+}
+
+.newsletter-cta {
+    padding: 120px 0;
+    background-image: url('assets/banner-7-2x-scaled.jpg');
+    background-size: cover;
+    position: relative;
+    bottom: 80px;
+    box-shadow: 0 0 1px 2px rgba(0,0,0, 0.02)
+}
+
+.newsletter-cta h3 {
+    font-size: 45px;
+}
+
+.newsletter-cta .input-box input {
+    height: 100%;
+    width: 500px;
+    padding: 10px 25px;
+    border-radius: 30px;
+    border-color: transparent;
+    background-color: #f4f4f4;
 }
