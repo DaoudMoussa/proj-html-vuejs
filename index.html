@@ -199,7 +199,7 @@
                                             <span :class="product.sale ? 'old-price' : null">
                                                 ${{ product.price.minPrice }}
                                                 <span v-if="product.price.minPrice != product.price.maxPrice">
-                                                    - {{ product.price.maxPrice }}
+                                                    - ${{ product.price.maxPrice }}
                                                 </span>
                                             </span>
 
@@ -339,7 +339,50 @@
                         </div>
                     </div>
                 </section>
+
+                <section id="new-products" class="white-section">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12 text-center">
+                                <h3>New products arrival</h3>
+                                <p>Latest products</p>
+                            </div>
+                        </div>
+                        <div class="list-container">
+                            <div class="row">
+                                <div class="col-4" v-for="(product, index) in getNewProducts()"
+                                    v-if="index < 6">
+                                    <div class="product">
+                                        <div class="image-container"
+                                            :class="product.sale ? 'in-sale' : null">
+                                            <img :src="'assets/' + product.image + '.jpg'"
+                                                :alt="product.name">
+                                            <div class="add-to-cart">
+                                                <i class="fas fa-check"></i>
+                                                <p class="text-uppercase">view cart</p>
+                                            </div>
+                                        </div>
+                                        <p class="product-name">{{ product.name }}</p>
+                                        <p class="price">
+                                            <span :class="product.sale ? 'old-price' : null">
+                                                ${{ product.price.minPrice }}
+                                                <span v-if="product.price.minPrice != product.price.maxPrice">
+                                                    - ${{ product.price.maxPrice }}
+                                                </span>
+                                            </span>
+
+                                            <span class="newPrice" v-if="product.sale">
+                                                ${{ product.price.newPrice }}
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
             </main>
+            
         </div>
 
 

@@ -93,11 +93,11 @@ input:active {
     margin-right: 0;
 }
 
-
 .list-container .product .image-container {
     position: relative;
     margin-bottom: 15px;
 }
+
 .list-container .product img {
     width: 100%;
 }
@@ -125,6 +125,19 @@ input:active {
     margin-bottom: 10px;
     cursor: pointer;
 }
+
+.list-container .product .image-container.in-sale::after {
+    content: 'Sale!';
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 50%;;
+    position: absolute;
+    top: 10px;
+    left: 5px;
+    background: #3e6f42;
+    color: white;
+}
+
 
 .list-container .product .add-to-cart p {
     font-size: 12px;
@@ -565,4 +578,8 @@ input:active {
 #jumbo-e-commerce .e-commerce-properties .property-card p {
     opacity: 0.7;
     margin: 0;
+}
+
+#new-products h3 + p {
+    color: #59b742;
 }

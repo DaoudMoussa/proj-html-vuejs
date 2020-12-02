@@ -228,7 +228,9 @@ const app = new Vue({
         },
         getBestProducts() {
             return this.products.filter(product => product.bestProduct);
-
+        },
+        getNewProducts() {
+            return this.products.filter(product => product.newProduct);
         }
     }
 });
