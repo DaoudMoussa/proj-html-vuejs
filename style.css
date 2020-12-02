@@ -529,3 +529,40 @@ input:active {
 .blog-post-container .btn {
     margin-top: 40px;
 }
+
+.jumbos-container::after {
+    content: '';
+    clear: both;
+    display: table;
+}
+
+#jumbo-e-commerce .jumbo-section {
+    width: 50%;
+    float: left;
+    text-align: center;
+}
+#jumbo-e-commerce .accessories {
+    background-image: url('assets/banner-8-2x.jpg');
+}
+
+#jumbo-e-commerce .new-food {
+    background-image: url('assets/banner-9-2x.jpg');
+}
+
+#jumbo-e-commerce .e-commerce-properties {
+    padding: 100px 0;
+}
+
+#jumbo-e-commerce .e-commerce-properties .property-card {
+    text-align: center;
+}
+
+#jumbo-e-commerce .e-commerce-properties .property-card i {
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+#jumbo-e-commerce .e-commerce-properties .property-card p {
+    opacity: 0.7;
+    margin: 0;
+}
