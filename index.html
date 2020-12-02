@@ -186,8 +186,14 @@
                                 <div class="col-3" v-for="(product, index) in getBestProducts()"
                                     v-if="index < 4">
                                     <div class="product">
-                                        <img :src="'assets/' + product.image + '.jpg'"
+                                        <div class="image-container">
+                                            <img :src="'assets/' + product.image + '.jpg'"
                                             :alt="product.name">
+                                            <div class="add-to-cart">
+                                                <i class="fas fa-check"></i>
+                                                <p class="text-uppercase">view cart</p>
+                                            </div>
+                                        </div>
                                         <p class="product-name">{{ product.name }}</p>
                                         <p class="price">
                                             <span :class="product.sale ? 'old-price' : null">
@@ -207,6 +213,7 @@
                         </div>
                     </div>
                 </section>
+                
             </main>
         </div>
 
