@@ -409,3 +409,29 @@ h1, h2, h3, h4, h5, h6 {
     margin-bottom: 5px;
     color: #59b742;
 }
+
+.testimonials {
+    padding: 80px 0;
+}
+
+.testimonials h3 {
+    font-size: 45px;
+}
+
+.testimonial-card {
+    padding: 50px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.testimonial-card img {
+    width: 100px;
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+.testimonial-card .name {
+    opacity: 0.7;
+}
