@@ -260,6 +260,36 @@
                             </div>
                         </div>
                     </div>
+                    <div class="blog-post-container">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="section-intestation text-center">
+                                        <h3>Get the best tips & tricks</h3>
+                                        <p>Recent articles</p>
+                                    </div>
+                                </div>
+                                <div class="col-3" v-for="blogPost in last4BlogPosts">
+                                    <div class="blog-post-card">
+                                        <div class="image-container">
+                                            <img :src="'assets/' + blogPost.image + '.jpg'" alt="">
+                                            <div class="title-hover">
+                                                <p>{{ blogPost.head }}</p>
+                                                <small>Tips & Tricks</small>
+                                            </div>
+                                        </div>
+                                        <div class="text-box">
+                                            <p class="post-title">{{ blogPost.head }}</p>
+                                            <div class="date">{{ blogPost.date }}</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-12 text-center">
+                                    <a href="#" class="btn btn-secondary">Read all articles</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
             </main>
         </div>

@@ -415,13 +415,15 @@ input:active {
     color: #59b742;
 }
 
+
+#community h3 {
+    font-size: 45px;
+}
+
 .testimonials {
     padding: 80px 0;
 }
 
-.testimonials h3 {
-    font-size: 45px;
-}
 
 .testimonial-card {
     padding: 50px 20px;
@@ -450,10 +452,6 @@ input:active {
     box-shadow: 0 0 1px 2px rgba(0,0,0, 0.02)
 }
 
-.newsletter-cta h3 {
-    font-size: 45px;
-}
-
 .newsletter-cta .input-box input {
     height: 100%;
     width: 500px;
@@ -461,4 +459,73 @@ input:active {
     border-radius: 30px;
     border-color: transparent;
     background-color: #f4f4f4;
+}
+
+.blog-post-container .section-intestation {
+    margin-bottom: 40px
+}
+
+.blog-post-container .section-intestation p {
+    color: #59b742;
+}
+
+.blog-post-card {
+    cursor: pointer;
+}
+
+.blog-post-card .image-container {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.blog-post-card img {
+    width: 100%;
+}
+
+.blog-post-card .image-container .title-hover {
+    display: none;
+    padding: 30px;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.1);
+    color: white;
+    text-align: center;
+}
+
+.blog-post-card .image-container .title-hover p {
+    font-size: 18px;
+}
+
+
+.blog-post-card:hover .image-container .title-hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column
+}
+
+.blog-post-card:hover .image-container img {
+    filter: sepia(0.3);
+}
+
+.blog-post-card .text-box {
+    padding: 0 15px;
+
+}
+
+.blog-post-card .post-title {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.blog-post-card .date {
+    opacity: 0.7;
+}
+
+.blog-post-container .btn {
+    margin-top: 40px;
 }
