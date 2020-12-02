@@ -122,14 +122,84 @@
                             </div>
 
                         </div>
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="list-container">
-                                    <div class="product category" v-for="category in getCategories()">
+                        <div class="list-container categories-container">
+                            <div class="row">
+                                <div class="col-3" v-for="category in getCategories()">
+                                    <div class="product category">
                                         <img :src="'assets/' + category.image + '.jpg'" :alt="category.name">
                                         <p class="product-name">
                                             {{ category.name }}
                                             <span>({{ category.productsQuantity }})</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="card-food mosaic-bg overlay">
+                                    <h3>Kibble</h3>
+                                    <p>Dry dog food</p>
+                                    <img src="assets/food-transparent-18.png" alt="dry animal food">
+                                    <a href="#" class="btn btn-secondary" role="button">Shop dry food</a>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="card-food mosaic-bg overlay">
+                                    <h3>Moist</h3>
+                                    <p>Canned dog food</p>
+                                    <img src="assets/food-transparent-17.png" alt="moist animal food">
+                                    <a href="#" class="btn btn-secondary" role="button">Shop moist food</a>
+                                </div>
+                            </div>
+                            <div class="col-4">
+                                <div class="card-food mosaic-bg overlay">
+                                    <h3>Frozen</h3>
+                                    <p>Frozen-dried dog food</p>
+                                    <img src="assets/food-transparent-16.png" alt="dry animal food">
+                                    <a href="#" class="btn btn-secondary" role="button">Shop frozen food</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="jumbo-section text-center new-arrival-jumbo">
+                                    <small>Find the best animal supplies</small>
+                                    <h4>New arrivals weekly</h4>
+                                    <a href="#" class="btn btn-primary" role="button">Learn more about us</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="best-items-intestation">
+                                    <div class="text-box">
+                                        <p>All time best sellers</p>
+                                        <h3>Items Everyone loves</h3>
+                                    </div>
+                                    <a href="#" class="btn btn-secondary" role="button">View all products</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="list-container">
+                            <div class="row">
+                                <div class="col-3" v-for="(product, index) in getBestProducts()"
+                                    v-if="index < 4">
+                                    <div class="product">
+                                        <img :src="'assets/' + product.image + '.jpg'"
+                                            :alt="product.name">
+                                        <p class="product-name">{{ product.name }}</p>
+                                        <p class="price">
+                                            <span :class="product.sale ? 'old-price' : null">
+                                                ${{ product.price.minPrice }}
+                                                <span v-if="product.price.minPrice != product.price.maxPrice">
+                                                    - {{ product.price.maxPrice }}
+                                                </span>
+                                            </span>
+
+                                            <span class="newPrice" v-if="product.sale">
+                                                ${{ product.price.newPrice }}
+                                            </span>
                                         </p>
                                     </div>
                                 </div>

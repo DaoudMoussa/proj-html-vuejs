@@ -38,7 +38,7 @@ const app = new Vue({
         // Dovrebbe essere un dato preso da un database con tutti i prodotti dell'e-commerce
         products: [
             {
-                product: 'colored pet bed',
+                name: 'colored pet bed',
                 category: 'Bed',
                 image: 'product-8',
                 price: {
@@ -51,7 +51,7 @@ const app = new Vue({
                 sale: false
             },
             {
-                product: 'Colorful ball set',
+                name: 'Colorful ball set',
                 category: 'Toys',
                 image: 'product-2',
                 price: {
@@ -64,7 +64,7 @@ const app = new Vue({
                 sale: false
             },
             {
-                product: 'Dog bone',
+                name: 'Dog bone',
                 category: 'Food',
                 image: 'product-3',
                 price: {
@@ -77,7 +77,7 @@ const app = new Vue({
                 sale: true
             },
             {
-                product: 'Animal transport bag',
+                name: 'Animal transport bag',
                 category: 'Transport',
                 image: 'product-4',
                 price: {
@@ -90,7 +90,7 @@ const app = new Vue({
                 sale: false
             },
             {
-                product: 'Animal transport cage',
+                name: 'Animal transport cage',
                 category: 'Transport',
                 image: 'product-5',
                 price: {
@@ -103,7 +103,7 @@ const app = new Vue({
                 sale: false
             },
             {
-                product: 'Closable cat litter',
+                name: 'Closable cat litter',
                 category: 'Transport',
                 image: 'product-10',
                 price: {
@@ -116,7 +116,7 @@ const app = new Vue({
                 sale: false
             },
             {
-                product: 'Transport cage',
+                name: 'Transport cage',
                 category: 'Transport',
                 image: 'product-21',
                 price: {
@@ -129,7 +129,7 @@ const app = new Vue({
                 sale: false
             },
             {
-                product: 'Dog leash',
+                name: 'Dog leash',
                 category: 'Transport',
                 image: 'product-20',
                 price: {
@@ -142,7 +142,7 @@ const app = new Vue({
                 sale: false
             },
             {
-                product: 'Animal transport cage',
+                name: 'Animal transport cage',
                 category: 'Transport',
                 image: 'product-16',
                 price: {
@@ -155,7 +155,7 @@ const app = new Vue({
                 sale: true
             },
             {
-                product: 'Colorful cat leash',
+                name: 'Colorful cat leash',
                 category: 'Transport',
                 image: 'product-11',
                 price: {
@@ -198,8 +198,11 @@ const app = new Vue({
                     image: filteredProducts[0].image
                 });
             });
-            console.log(listCategories);
             return listCategories;
+        },
+        getBestProducts() {
+            return this.products.filter(product => product.bestProduct);
+
         }
     }
 });
