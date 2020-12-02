@@ -39,10 +39,10 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-12">
-                                <ul>
+                                <ul class="nav-voices-list">
                                     <li v-for="(voice, index) in navVoices"
                                         :class="getNavVoiceClasses(index)">
-                                        <a href="#">{{ voice.name }}</a>
+                                        <a href="voice.link">{{ voice.name }}</a>
                                     </li>
                                 </ul>
                             </div>
@@ -382,7 +382,100 @@
                     </div>
                 </section>
             </main>
-            
+            <footer>
+                <div class="container">
+                    <div class="top-footer">
+                        <div class="row">
+                            <div class="col-3">
+                                <div class="avada-pet-supplies-info">
+                                    <div class="logo-box">
+                                        <img src="assets/mobile-light-pet-logo-2x.png" alt="logo avada pet supplies">
+                                    </div>
+                                    <p>1234 Avada Avenue Avadaville</p>
+                                    <p>info@your-company.com</p>
+                                    <p>call us: (1) 234 5678</p>
+                                </div>
+                            </div>
+                            <div class="col-3">
+                                <ul class="footer-list">
+                                    <li>
+                                        <h4>Shop by brand</h4>
+                                    </li>
+                                    <li>
+                                        <a href="#">Bed</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Food</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Toys</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Transport</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-3">
+                                <ul class="footer-list">
+                                    <li>
+                                        <h4>Useful links</h4>
+                                    </li>
+                                    <li>
+                                        <a href="#">My account</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Orders</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Checkout</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Cart</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-3">
+                                <div class="newsletter-reminder mosaic-bg light-overlay">
+                                    <p>Subscribe to our newsletter</p>
+                                    <input type="email" placeholder="Insert your email...*">
+                                    <a href="#" class="btn btn-secondary">Subscribe</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div
+                    >
+                    <div class="bottom-footer">
+                        <div class="row">
+                            <div class="col-12">
+                                <ul class="nav-voices-list">
+                                    <li v-for="(voice, index) in navVoices">
+                                        <a href="voice.link"
+                                            :class="activeNavVoice == index ? 'active' : null">
+                                            {{ voice.name == 'Shop by brand' ? 'Shop' : voice.name }}
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-12">
+                                <ul class="social-list">
+                                    <li v-for="social in socials">
+                                        <a href="social.link">
+                                            <i class="fab"
+                                                :class="'fa-' + social.iconClass">
+                                            </i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <div class="credits">
+                <p>
+                    &copy; Copyright 2012 - 2020 | Avada Theme by ThemeFusion | All Rights Reserved | Powered by WordPress
+                </p>
+            </div>
         </div>
 
 

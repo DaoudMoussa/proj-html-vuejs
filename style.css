@@ -12,7 +12,8 @@
     position: relative;
 }
 
-.mosaic-bg.overlay > * {
+.mosaic-bg.overlay > *,
+.mosaic-bg.light-overlay > * {
     position: relative;
     z-index: 2;
 }
@@ -26,6 +27,18 @@
     top: 0;
     left: 0;
     background: linear-gradient(0deg, #2a382a 60%, rgba(0,0,0,0) 80%);
+}
+
+.mosaic-bg.light-overlay::before {
+    content: '';
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(0deg, #264229 60%, rgba(0,0,0,0) 80%);
+    border-radius: 5px;;
 }
 
 .white-section {
@@ -100,18 +113,25 @@ input:active {
 
 .list-container .product img {
     width: 100%;
+    transition: filter 0.3s;
 }
 
 .list-container .product .add-to-cart {
-    display: none;
     position: absolute;
     width: 100%;
     height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: white;
     background-color: rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transition: opacity 0.3s;
+
 }
 
 .list-container .product .add-to-cart i {
@@ -126,11 +146,15 @@ input:active {
     cursor: pointer;
 }
 
+.list-container .product .add-to-cart p {
+    font-size: 12px;
+}
+
 .list-container .product .image-container.in-sale::after {
     content: 'Sale!';
     display: inline-block;
     padding: 5px 10px;
-    border-radius: 50%;;
+    border-radius: 50%;
     position: absolute;
     top: 10px;
     left: 5px;
@@ -138,21 +162,12 @@ input:active {
     color: white;
 }
 
-
-.list-container .product .add-to-cart p {
-    font-size: 12px;
-}
-
-
 .list-container .product:hover img {
-    filter: sepia(1)
+    filter: sepia(0.8)
 }
 
 .list-container .product:hover .add-to-cart{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+    opacity: 1;
 }
 
 .list-container .product .product-name {
@@ -249,7 +264,8 @@ input:active {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
 }
 
-.bottom-header ul{
+.nav-voices-list,
+.social-list {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -257,7 +273,7 @@ input:active {
     margin-bottom: 0;
 }
 
-.bottom-header li a {
+.nav-voices-list li a {
     color: #dcd5d0;
     display: inline-block;
     height: 60px;
@@ -582,4 +598,105 @@ input:active {
 
 #new-products h3 + p {
     color: #59b742;
+}
+
+footer {
+    background-color:   #1e3020;
+    color: white;
+    padding: 100px 0;
+}
+
+footer .top-footer {
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3)
+}
+
+footer img {
+    width: 80%;
+    margin-bottom: 30px;
+}
+
+footer .avada-pet-supplies-info p {
+    margin-bottom: 5px;
+}
+
+footer .footer-list {
+    list-style-type: none;
+}
+
+footer .footer-list h4 {
+    margin-bottom: 30px;
+    font-family: "Roboto condesed", sans-serif;
+}
+
+footer .footer-list a {
+    display: block;
+    margin-bottom: 20px;
+    color: white;
+    text-decoration: none;
+}
+
+footer .footer-list a:hover {
+    opacity: 0.7;
+}
+
+footer .newsletter-reminder {
+    padding: 40px 25px;
+    border-radius: 10px;
+    background-color: #264229 ;
+}
+
+footer .newsletter-reminder p {
+    font-size: 18px;
+    margin-bottom: 25px;
+}
+
+footer input {
+    height: 50px;
+    width: 100%;
+    padding: 10px 25px;
+    border-radius: 30px;
+    border-color: transparent;
+    background-color: #f4f4f4;
+    margin-bottom: 20px;
+}
+
+footer .btn {
+    width: 100%;
+    text-align: center;
+}
+
+footer .nav-voices-list li a:not(.active){
+    opacity: 0.7;
+    transition: opacity 0.3s;
+}
+
+footer .nav-voices-list li a:hover {
+    opacity: 1;
+    text-decoration: none;
+}
+
+footer .social-list li a {
+    color: #dcd5d0;
+    display: inline-block;
+    padding: 10px;
+    font-size: 24px;
+    font-weight: 600;
+    transition: opacity 0.3s;
+}
+
+footer .social-list li a:hover {
+    opacity: 0.7;
+}
+
+.credits {
+    padding: 10px;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+
+.credits p {
+    margin: 0;
 }
